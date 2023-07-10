@@ -1,0 +1,94 @@
+
+
+ 
+ <nav class="flex_container">
+            <h1 class="nav_flex_container">Bienvenidos al Widget</h1>
+            <ul class="nav_flex_ul">
+                <li><a href="/">On the fly</a></li>
+                <li><a href="./enuelz">en Uelz</a></li>
+            </ul>
+</nav>
+
+<div>
+    <form id="ServiceForm">
+        <div class="flex_container_form" >
+            <div>
+                <p>Datos del plan</p>
+                        <div class="serviceName">
+                            <label for="serviceName">Service name:</label>
+                            <input type="text" id="serviceName"style="margin: 8px" required/>
+                        </div>
+                        <div class="planName">
+                            <label for="data-plan-name">Plan name:</label>
+                            <input type="text" id="data-plan-name" style="margin: 8px" required/>
+                        </div>
+                        <div>
+                            <label for="data-plan-description">Plan description:</label>
+                            <input type="textarea" id="data-plan-description" style="margin: 8px" required/>
+                        </div>
+                        <div >
+                            <label for="data-plan-amount">Plan amount:</label>
+                            <input type="number" id="data-plan-amount" style="margin: 8px" required/>
+                        </div>
+
+                        <div>
+                            <label for="data-plan-type">Tipo de plan</label>
+                            <select name="" id="data-plan-type">
+                                <option value="Subscription">Subscription</option>
+                                <option value="Unique">Unique</option>
+                                <option value="error">error</option>
+                            </select>
+                        </div>
+                        <div >
+                            <label for="data-plan-frecuency">Plan frecuency:</label>
+                            <input type="text" id="data-plan-frecuency" style="margin: 8px"/>
+                        </div>
+                        <div >
+                            <label for="data-plan-billying-cycles">Billying cycles</label>
+                            <input type="number" id="data-plan-billying-cycles" style="margin: 8px"/>
+                        </div>
+                         <div >
+                            <label for="data-plan-payment-day">Payment day</label>
+                            <input type="number" id="data-plan-payment-day" style="margin: 8px" />
+                        </div>
+
+
+
+
+
+            </div>
+            <div>
+                <p>Datos del usuario</p>
+                    <div>
+                        <label for="data-customer-email">Customer email:</label>
+                        <input type="text" id="data-customer-email"  style="margin: 8px"/>
+                    </div>
+                    <div>
+                        <label for="editable">No editable</label>
+                        <input type="checkbox" name="editable" id="editable" value="data-customer-not-editable">
+                    </div>
+            </div>
+        </div>
+    <div> 
+        <button class="btn colorBoton m-5" id="ServiceCreation" >completar datos</button>
+        <input type="reset" value="Borrar" class="cancel_button">
+    </div>    
+    </form>   
+    
+    <br>
+    <br>
+
+    
+    <button class="uelz-button uelz-button-styles" id="nuevoBotonUelz" data-service-name="" data-plan-name="" data-plan-description="" data-plan-amount="" data-plan-currency="EUR">Comprar</button>
+
+
+</div>
+{{!-- 
+
+ <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+
+
+<script src="/socket.io/socket.io.js"></script> 
+clase 9 agregar script para relacioanr con javascrit: index.js --}}
+<script src="/js/index.js"></script>
+
