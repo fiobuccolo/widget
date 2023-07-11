@@ -79,7 +79,7 @@ class User{
         if(customerCountry) nuevoBotonUelz.setAttribute("data-country", customerCountry)
         if(customerCity) nuevoBotonUelz.setAttribute("data-city", customerCity)
         if(customerPostalCode) nuevoBotonUelz.setAttribute("data-postal-code", customerPostalCode)
-        if(customerAddress) nuevoBotonUelz.setAttribute("data-addres", customerAddress)
+        if(customerAddress) nuevoBotonUelz.setAttribute("data-address", customerAddress)
         if(customerExternalId) nuevoBotonUelz.setAttribute("data-external-customer-idl", customerExternalId)
         
         if(nonEditable)
