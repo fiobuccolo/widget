@@ -55,20 +55,21 @@ class User{
         const customerPostalCode = document.getElementById("data-postal-code").value;
         const customerAddress = document.getElementById("data-address").value;
         const customerExternalId = document.getElementById("data-external-customer-id").value;
-        let editable = document.getElementById("editable").checked;
+        let nonEditable = document.getElementById("editable").checked;
         // -------
         console.log(serviceName)
-        console.log(`editable: ${editable}`)
+        console.log(`editable: ${nonEditable}`)
         const plan = new Plan(serviceName,planName,planDescription,planAmount);
         nuevoBotonUelz.setAttribute("data-service-name", serviceName)
         nuevoBotonUelz.setAttribute("data-plan-name", planName)
         nuevoBotonUelz.setAttribute("data-plan-description", planDescription)
         nuevoBotonUelz.setAttribute("data-plan-amount", planAmount)
         if (planType) {nuevoBotonUelz.setAttribute("data-plan-type", planType)}
-            else{nuevoBotonUelz.setAttribute("data-plan-type", "unique")};
-        if(planFrequency) nuevoBotonUelz.setAttribute("data-plan-frecuency", planFrequency)
-        if(planCycles) nuevoBotonUelz.setAttribute("data-plan-frecuency", planCycles)
-        if(planPaymentDay) nuevoBotonUelz.setAttribute("data-plan-frecuency", planPaymentDay)
+            else{nuevoBotonUelz.setAttribute("data-plan-type", "Unique")};
+        if(planFrequency) nuevoBotonUelz.setAttribute("data-plan-frequency", planFrequency)
+        if(planCycles) nuevoBotonUelz.setAttribute("data-plan-billying-cycles", planCycles)
+        if(planPaymentDay) nuevoBotonUelz.setAttribute("data-plan-payment-day", planPaymentDay)
+        // customer atributes
         if(customerEmail) nuevoBotonUelz.setAttribute("data-customer-email", customerEmail)
         if(customerCif) nuevoBotonUelz.setAttribute("data-customer-cif", customerCif)
         if(customerName) nuevoBotonUelz.setAttribute("data-name", customerName)
@@ -80,9 +81,13 @@ class User{
         if(customerPostalCode) nuevoBotonUelz.setAttribute("data-postal-code", customerPostalCode)
         if(customerAddress) nuevoBotonUelz.setAttribute("data-addres", customerAddress)
         if(customerExternalId) nuevoBotonUelz.setAttribute("data-external-customer-idl", customerExternalId)
-        if(editable=false)
-            {nuevoBotonUelz.removeAttribute("data-customer-not-editable")}else{
-               nuevoBotonUelz.setAttribute("data-customer-not-editable")
+        
+        if(nonEditable)
+            {console.log("entre al if de remove-- deberia ser true")
+            nuevoBotonUelz.setAttribute("data-customer-not-editable","")
+            }else{
+               console.log("entre al else de remove-- deberia ser false")
+               nuevoBotonUelz.removeAttribute("data-customer-not-editable")
             }
 
 
